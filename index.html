@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Simple Bank App-Ebtesam Alzaabi</title>
+
+    <!-- bootstrap css link file -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    <!-- css main style -->
+    <link rel="stylesheet" href="./css/style.css">
+
+
+</head>
+
+<body>
+
+<!-- قسم البنك -->
+<section class="bank-section">
+
+    <div class="account-box">
+
+        <!-- العنوان الرئيسي -->
+        <h1 class="main-title">
+            Simple Bank App
+        </h1>
+
+        <!-- نموذج إنشاء الحساب -->
+        <form id="accountForm">
+
+            <div class="mb-3">
+                <label for="Fullname" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="Fullname" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="National-ID" class="form-label">National ID</label>
+                    <input type="number" class="form-control" id="National-ID" placeholder="ID number" required>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label for="Age" class="form-label">Age</label>
+                    <input type="number" class="form-control" id="Age" placeholder="Your age" required>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="Account-type" class="form-label">Account Type</label>
+                <select class="form-select" id="Account-type" required>
+                    <option disabled selected>Select account type</option>
+                    <option value="1">Saving Account</option>
+                    <option value="2">Current Account</option>
+                    <option value="3">Business Account</option>
+                </select>
+            </div>
+
+            <div class="mb-4">
+                <label for="Intial-Deposit_Amount" class="form-label">Initial Deposit</label>
+                <input type="number" class="form-control" id="Intial-Deposit_Amount" placeholder="Deposit amount" required>
+            </div>
+
+            <button type="submit" id="logbtn" class="btn btn-success w-100">Create Account</button>
+
+        </form>
+
+        <!-- رسائل النجاح والخطأ -->
+        <div id="errMess" class="alert alert-danger mt-3 d-none text-center">
+            You must be at least 18 years old
+        </div>
+
+        <div id="succMess" class="alert alert-success mt-3 d-none text-center">
+            Account created successfully
+        </div>
+
+    </div>
+</section>
+
+
+    <!-- bootstrap js link file -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- js main style -->
+    <script src="./JS/main.js"></script>
+
+</body>
+
+</html>
